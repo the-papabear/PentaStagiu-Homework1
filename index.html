@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meubles - Your favourite online furniture store</title>
+</head>
+<body>
+<header class="header">
+    <div class="header__container">
+        <h1 class="header__title">We care about your well-being!</h1>
+        <p class="header__body">As times got tough, we wanted to be as close to our customers as possible. Now you can order all of your favourite items from the comfort of your own home! The best prices now at your fingertips!</p>
+        <div class="header__links">
+            <span class="header__category cursor">Kitchen</span>
+            <span class="header__category cursor">Bathroom</span>
+            <span class="header__category cursor">Living</span>
+            <span class="header__category cursor">Outdoors</span>
+            <span class="header__category cursor">All furniture</span>
+         </div>
+      </div>
+</header>
+<div class="main-container">
+    <nav class="nav nav--sticky">
+        <div class="burger-menu">
+            <div class="burger-menu__component"></div>
+            <div class="burger-menu__component burger-menu__component--smaller"></div>
+            <div class="burger-menu__component"></div>
+        </div>
+        <img class="nav__img cursor" src="img/logo.png">
+        <div class="nav__navigation">
+          <div class="nav__category">
+                <button class="nav__btn">Classic
+                 <ion-icon name="caret-down-outline"></ion-icon>
+              </button>
+               <div class="nav__content">
+                    <a class="nav__link" href="">Living Room</a>
+                    <a class="nav__link" href="">Kitchen</a>
+                    <a class="nav__link" href="">Bathroom</a>
+                    <a class="nav__link" href="">Children's room</a>
+                    <a class="nav__link" href="">Outdoors</a>
+                </div>
+            </div>
+            <div class="nav__category">
+                <button class="nav__btn">Modern
+                    <ion-icon name="caret-down-outline"></ion-icon>
+                </button>
+                <div class="nav__content">
+                    <a class="nav__link" href="">Living Room</a>
+                    <a class="nav__link" href="">Kitchen</a>
+                    <a class="nav__link" href="">Bathroom</a>
+                    <a class="nav__link" href="">Children's room</a>
+                    <a class="nav__link" href="">Outdoors</a>
+                </div>
+            </div>
+            <div class="nav__category">
+                <button class="navbar-btn nav__btn">Multicolor
+                    <ion-icon name="caret-down-outline"></ion-icon>
+                </button>
+                <div class="nav__content">
+                    <a class="nav__link" href="">Living Room</a>
+                    <a class="nav__link" href="">Kitchen</a>
+                    <a class="nav__link" href="">Bathroom</a>
+                    <a class="nav__link" href="">Children's room</a>
+                    <a class="nav__link" href="">Outdoors</a>
+                </div>
+            </div>
+            <div class="nav__search">
+                <ion-icon class="cursor" name="search-outline"></ion-icon>
+                <input class="nav__input" type="text" placeholder="Search...">
+            </div>
+        </div>
+        <div class="nav__icons">
+            <ion-icon name="person-outline" class="nav__icon cursor"></ion-icon>
+            <ion-icon name="heart-outline" class="nav__icon cursor"></ion-icon>
+            <ion-icon name="bag-handle-outline" class="nav__icon cursor"></ion-icon>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="section__wrapper">
+            <img class="section__img" src="img/grey-couch-with-blue-pillows.jpg">
+        </div>
+        <div class="section__text">
+                <h2 class="section__heading">Loved by all family members</h2>
+                <p class="section__content">From your newborn to your cat, the great selection of couches that we provide are sure to make everyone happy. Spend all the time you need to pick the greatest item for your lovely home. Do not worry about item shipping. It's free!
+                </p>
+         </div>
+    </section>
+
+    <section class="article">
+        <div class="article__wrapper">
+            <img class="article__img" src="img/child-next-to-a-bookshelf.jpg">
+        </div>
+        <div class="article__text">
+            <h3 class="article__heading">Give your young ones a head start</h3>
+            <p class="article__content">Using the right furniture in your house is proved to boost creativity and make young minds curious about their surroundings.
+                <a class="article__btn" href="">Read more...</a>
+            </p>
+            <a class="article__link" href="">Recommended: Creating the right bedroom for children</a>
+        </div>
+    </section>
+
+    <section class="carousel">
+        <div class="carousel__card">
+                <img class="carousel__img" src="img/carousel/chair-with-bookshelf.jpg">
+            <div class="carousel__wrapper">
+                <div class="carousel__item">
+                    <h4 class="carousel__category">Classic</h4>
+                    <p>Classic cupboard</p>
+                </div>
+                <div class="carousel__price">
+                    <p class="carousel__price--black">&pound;123</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel__card">
+                <img class="carousel__img" src="img/carousel/closet-with-two-cats.jpg">
+            <div class="carousel__wrapper">
+                <div class="carousel__item">
+                    <h4 class="carousel__category">Classic</h4>
+                    <p>Red square living room carpet</p>
+                </div>
+                <div class="carousel__price">
+                    <p class="carousel__price--red">&pound;123</p>
+                    <p class="carousel__price--linethrough">&pound;123</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel__card">
+                <img class="carousel__img" src="img/carousel/kitchen-counter-tops.jpg">
+            <div class="carousel__wrapper">
+                <div class="carousel__item">
+                    <h4 class="carousel__category">Modern</h4>
+                    <p>Egg chair with red pillow</p>
+                </div>
+                <div class="carousel__price">
+                    <p class="carousel__price--red">&pound;123</p>
+                    <p class="carousel__price--linethrough">&pound;123</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel__card">
+                <img class="carousel__img" src="img/carousel/mdoern-night-stand.jpg">
+            <div class="carousel__wrapper">
+                <div class="carousel__item">
+                    <h4 class="carousel__category">Classic</h4>
+                    <p>Rocking armchair</p>
+                </div>
+                <div class="carousel__price">
+                    <p class="carousel__price--red">&pound;123</p>
+                    <p class="carousel__price--linethrough">&pound;123</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel__card">
+                <img class="carousel__img" src="img/carousel/minimalist-bookshelf.jpg">
+            <div class="carousel__wrapper">
+                <div class="carousel__item">
+                    <h4 class="carousel__category">Classic</h4>
+                    <p>Ottoman chair - Teal</p>
+                </div>
+                <div class="carousel__price">
+                    <p class="carousel__price--red">&pound;123</p>
+                    <p class="carousel__price--linethrough">&pound;123</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="article">
+        <div class="article__wrapper">
+            <img class="article__img" src="img/woman-at-a-desk-next-to-big-windows.jpeg">
+        </div>
+        <div class="article__text">
+            <h3 class="article__heading">Working with passion</h3>
+            <p class="article_content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, excepturi commodi corporis reiciendis exercitationem assumenda minus quibusdam, harum aspernatur nostrum id saepe. Dolor, cum possimus modi repudiandae aut necessitatibus officiis!
+            <a class="article__btn" href="">Read more...</a>
+            </p>
+            <a class="article__link" href="" >Recommended: Making the office more homely-looking</a>
+        </div>
+    </section>
+    
+    <section class="carousel">
+        <div class="carousel__card">
+                <img class="carousel__img" src="img/carousel/modern-chair.jpg">
+            <div class="carousel__wrapper">
+                <div class="carousel__item">
+                    <h4 class="carousel__category">Classic</h4>
+                    <p>Vintage Lounging chair</p>
+                </div>
+                <div class="carousel__price">
+                    <p class="carousel__price--black">&pound;123</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel__card">
+                <img class="carousel__img" src="img/carousel/simple-storage-place.jpg">
+            <div class="carousel__wrapper">
+                <div class="carousel__item">
+                    <h4 class="carousel__category">Modern</h4>
+                    <p>Hanging bookshelf - Black</p>
+                </div>
+                <div class="carousel__price">
+                    <p class="carousel__price--red">&pound;123</p>
+                    <p class="carousel__price--linethrough">&pound;123</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel__card">
+                <img class="carousel__img" src="img/carousel/table-with-chairjpg">
+            <div class="carousel__wrapper">
+                <div class="carousel__item">
+                    <h4 class="carousel__category">Modern</h4>
+                    <p>Green couch</p>
+                </div>
+                <div class="carousel__price">
+                    <p class="carousel__price--red">&pound;123</p>
+                    <p class="carousel__price--linethrough">&pound;123</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel__card">
+                <img class="carousel__img" src="img/carousel/white-desk-with-black-chair.jpg">
+            <div class="carousel__wrapper">
+                <div class="carousel__item">
+                    <h4 class="carousel__category">Classic</h4>
+                    <p>Wooden armchair with yellow pillow</p>
+                </div>
+                <div class="carousel__price">
+                    <p class="carousel__price--red">&pound;123</p>
+                    <p class="carousel__price--linethrough">&pound;123</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel__card">
+                <img class="carousel__img" src="img/carousel/yellow-sofa-top-viewjpg">
+            <div class="carousel__wrapper">
+                <div class="carousel__item">
+                    <h4 class="carousel__category">Classic</h4>
+                    <p>Hardwood Table</p>
+                </div>
+                <div class="carousel__price">
+                    <p class="carousel__price--red">&pound;123</p>
+                    <p class="carousel__price--linethrough">&pound;123</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="article article--reversed">
+        <div class="article__text">
+            <h3 class="article__heading">Working from your couch should be comfy</h3>
+            <p class="article__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut sit voluptate temporibus ratione illo, quae mollitia consectetur provident vero dolore. 
+            <a class="article__btn" href="">Read more...</a>
+            </p>
+            <button class="article__link">One click buy</button>
+        </div>
+        <div class="article__wrapper">
+            <img class="article__img" src="img/woman-working-on-a-blue-laptop-on-a-couch.jpg">
+        </div>
+    </section>
+
+    <div class="break-line"></div>
+
+    <section class="download">
+        <div class="download__card">
+            <h2>Sample Living Room</h2>
+         <div class="download__wrapper">
+            <img class="download__img" src="img/yellow-themed-living-room.jpg">
+          </div>
+         <a class="download__link" href="">Download this picture here</a>
+        </div>
+
+        <div class="download__card">
+            <h2>Sample Kitchen</h2>
+            <div class="download__wrapper">
+                <img class="download__img" src="img/white-themed-kitchen.jpg">
+             </div>
+            <a class="download__link" href="">Download this picture here</a>
+        </div>
+
+        <div class="download__card">
+            <h2>Sample Bedroom</h2>
+            <div class="download__wrapper">
+                <img class="download__img" src="img/full-bedroom.jpg">
+            </div>
+            <a class="download__link" href="">Download this picture here</a>
+        </div>
+    </section>
+
+    <div class="contact-mail">
+        <p>For more information, please contact us at</p>
+        <a href="mailto:contact@meubles.com">contact@meublesfurniture.com</a>
+    </div>
+
+    <section class="newsletter-form">
+        <div class="newsletter-form--heading">
+            <h2>We can send our best offers directly through e-mail</h2>
+        </div>
+        <div class="newsletter-form--inputs">
+            <input type="text" placeholder="Enter email" class= "mail-input"required>
+            <input type="submit" value="GO" class="submit">
+        </div>
+        <p>We promise our e-mails contain only useful information about our products.
+        </p>
+    </section>
+
+    <section class="table">
+        <div class="links-container">
+            <input type="radio" name="tableItem" id="tableItem1">
+                <label for="tableItem1">
+                    <h3>About Us</h3>
+                    <ion-icon name="chevron-down-outline"></ion-icon> 
+                </label>
+            <div class="table-item-content">
+                <ul>
+                    <li class="cursor">Our Heritage</li>
+                    <li class="cursor">Our products</li>
+                    <li class="cursor">Stories and News</li>
+                    <li class="cursor">Investor Relations</li>
+                    <li class="cursor">Policies and Standards</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="links-container">
+                <input type="radio" name="tableItem" id="tableItem2">
+                <label for="tableItem2">
+                    <h3>Careers</h3>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </label>
+            <div class="table-item-content">
+                <ul>
+                    <li class="cursor">Culture and Values</li>
+                    <li class="cursor">Inclusion, Diversity, and Equity</li>
+                    <li class="cursor">College achievement plan</li>
+                    <li class="cursor">Careers</li>
+                    <li class="cursor">International Careers</li>
+                </ul>    
+            </div>
+        </div>
+
+        <div class="links-container">
+                <input type="radio" name="tableItem" id="tableItem3">
+                <label for="tableItem3">
+                    <h3>For Business Partners</h3>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </label>
+            <div class="table-item-content">
+                <ul>
+                    <li class="cursor">Landlord Support Center</li>
+                    <li class="cursor">Suppliers</li>
+                    <li class="cursor">Corporate Gift Card Sales</li>
+                </ul>    
+            </div>
+        </div>
+
+        <div class="links-container">
+                <input type="radio" name="tableItem" id="tableItem4">
+                <label for="tableItem4">
+                    <h3>Social Impact</h3>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </label>
+                
+            <div class="table-item-content">
+                <ul>
+                    <li class="cursor">Ethical Sourcing</li>
+                    <li class="cursor">Leading in Sustainabilty</li>
+                    <li class="cursor">Strenghtening Communities</li>
+                    <li class="cursor">Creating Opportunities</li>
+                    <li class="cursor">Global Social Impact Report</li>
+                </ul>    
+            </div>
+        </div>
+
+        <div class="links-container">
+                <input type="radio" name="tableItem" id="tableItem5">
+                <label for="tableItem5">
+                    <h3>Order and Pickup</h3>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </label>
+                
+            <div class="table-item-content">
+                <ul>
+                    <li class="cursor">Order on the App</li>
+                </ul>    
+            </div>
+        </div>
+    </section>
+
+    <div class="socials main-container__socials">
+        <ion-icon name="logo-twitter" class="nav__icon"></ion-icon>
+        <ion-icon name="logo-facebook" class="nav__icon"></ion-icon>
+        <ion-icon name="logo-instagram" class="nav__icon"></ion-icon>
+        <ion-icon name="logo-pinterest" class="nav__icon"></ion-icon>
+    </div>
+
+    <div class="break-line"></div>
+    
+    <footer>
+        <div class="terms-and-conditions">
+            <p>Terms and conditions</p>
+            <p>Cookies and privacy policy</p>
+            <p>Sitemap</p>
+        </div>
+        <div class="copyright main-container__copyright">
+            <p>&copy; meuble.com 2021. All rights reserved</p>
+        </div>
+    </footer>
+</div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
