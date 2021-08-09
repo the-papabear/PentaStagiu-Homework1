@@ -22,6 +22,13 @@ h3{
     font-size: 4.5vh;
 }
 
+.section,
+.article,
+.carousel,
+.download {
+    transition: transform 1s, opacity 1s;
+}
+
 .header {
     background-color:#545d63;
     display: flex;
@@ -98,16 +105,18 @@ h3{
     gap: 35px;
 }
 
-.nav__icon{
+.nav__icon,
+.socials__icon{
     font-size: 20px;
     transition: all .2s ease;
 }
 
-.nav__icon:first-child{
+.nav__icon--hidden{
     display: none;
 }
 
-.nav__icon:hover{
+.nav__icon:hover,
+.socials__icon:hover{
     transform: scale(1.3);
 }
 
@@ -132,6 +141,12 @@ h3{
     width: 100%;
     background-color: #EFEEE5;
     padding: 0 4em 4em 4em;
+}
+
+.section__letter {
+    position: relative;
+    margin: -10px;
+    color: red;
 }
 
 .section__heading {
@@ -171,8 +186,8 @@ h3{
 .nav__link,
 .article__btn:link,
 .article__btn:visited,
-.contact-mail a:link,
-.contact-mail a:visited{
+.contact__link:link,
+.contact__link:visited{
     color: black;
     font-weight: bold;
 }
@@ -180,43 +195,58 @@ h3{
 .article__link,
 .article__link:link,
 .article__link:visited {
+    position: relative;
     margin: 0 auto;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
     background-color: #222321;
     padding: 5px 20px 10px 20px;
     border-radius: 5px;
     border: none;
 }
 
+.article__link span {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    transition: all .5s ease;
+}
+
 .carousel {
     position: relative;
-    width: 100%;
-    flex-direction: row;
-    display: flex;
+    width: 70%;
+    height: 500px;
+    margin: 0 auto;
     gap: 10px;
-    overflow-x: auto;
     padding: 0 2em;
+    overflow: hidden;
 }
 
-.carousel::before{
-    content: "";
+.left-arrow,
+.right-arrow {
     position: absolute;
-    width: 100%;
-    max-width: 300px;
-    height: 100%;
-    background: linear-gradient(to right, white, transparent);
-    left: -20px;
+    font-size: 56px;
+    z-index: 1000;
 }
 
-.carousel::-webkit-scrollbar {
-    display: none;
+.left-arrow {
+    left:0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-arrow {
+ right: 0;
+ top: 50%;
+ transform: translateY(-50%);
 }
 
 .carousel__card {
+    position: absolute;
     display: flex;
     flex-direction: column;
+    width: 350px;
+    height: 100%;
+    transition: transform 1s linear;
+    padding: 0 10px;
 }
 
 .carousel__img {
@@ -293,7 +323,7 @@ h3{
     font-weight: bold;
 }
 
-.contact-mail {
+.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,7 +331,7 @@ h3{
     margin-bottom: 30px;
 }
 
-.newsletter-form {
+.newsletter {
     width: 99.1vw;
     display: flex;
     flex-direction: column;
@@ -311,20 +341,21 @@ h3{
     background-color: #EFEEE5;
 }
 
-.newsletter-form h2 {
+.newsletter__heading {
     padding: 1em 2em .5em 2em;
     text-align: center;
     margin: 0;
 }
 
-.newsletter-form .newsletter-form--inputs {
+.newsletter__inputs {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.newsletter-form .newsletter-form--inputs .mail-input {
+
+.newsletter__mail {
     width: 90%;
     text-align: center;
     font-weight: bold;
@@ -333,7 +364,7 @@ h3{
     background-color: #EFEEE5;
 }
 
-.newsletter-form .submit {
+.newsletter__submit {
     color: white;
     background-color: black;
     border: none;
@@ -342,7 +373,7 @@ h3{
     margin: .5em 0 2em 0;
 }
 
-.newsletter-form p {
+.newsletter__text{
     width: 90%;
     text-align: center;
     padding-bottom: 20px;
@@ -354,7 +385,7 @@ h3{
     flex-direction: column;
 }
 
-.table label{
+.table__label{
     width: 100%;
     display: flex;
     align-items: center;
@@ -367,15 +398,15 @@ h3{
     display: none;
 }
 
-.table .table-item-content {
+.table__content {
     display: none;
 }
 
-.table input:checked + label + .table-item-content {
+.table input:checked + label + .table__content {
     display: block;
 }
 
-.table .table-item-content ul li {
+.table__item {
     list-style: none;
     padding: 10px 1em;
 }
@@ -390,7 +421,7 @@ h3{
     padding-bottom: 50px;
 }
 
-footer{
+.footer{
     display: none;
 }
 
@@ -440,12 +471,12 @@ section {
         width: 49%;
     }
 
-    .contact-mail {
+    .contact {
         gap: 5px;
         flex-direction: row;
     }
 
-    .newsletter-form .mail-input {
+    .newsletter__mail {
         width: 75%;
     }
 }
@@ -551,28 +582,29 @@ section {
         display: block;
     }
 
-    .newsletter-form{
+
+    .newsletter{
         flex-direction: row;
         align-items: center;
         padding: 0 3em;
         height: 150px;
     }
 
-    .newsletter-form .newsletter-form--heading,
-    .newsletter-form .newsletter-form--inputs {
+    .newsletter_wrapper,
+    .newsletter__inputs {
         width: 50%;
     }
     
-    .newsletter-form .newsletter-form--inputs {
+    .newsletter__inputs {
         flex-direction: row;
         gap: 10px;
     }
 
-    .newsletter-form .newsletter-form--inputs .submit {
+    .newsletter__submit {
         margin: 0;
     }
 
-    .newsletter-form p {
+    .newsletter__text {
         display: none;
     }
 
@@ -589,36 +621,36 @@ section {
         justify-content: flex-start;
     }
 
-    .table ion-icon {
+    .table__downarrow {
         display: none;
     }
 
-    .table .table-item-content {
+    .table__content {
         display: block;
         padding: 0;
     }
 
-    .table .table-item-content li:hover {
-        text-decoration: underline;
-        text-underline-offset: 3px;
-    }
-    
-    .table ul li{
+    .table__item{
         color: #0000008f;
         padding-top: .8rem;
         padding-bottom:.8rem;
         margin-bottom:.8rem;
         list-style-type: none;
     }
+
+    .table__item:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
     
-     .links-container{
+     .table__category{
         width: 250px;
         height: 400px;
         font-weight: bold;
         padding-left: 2em;
     }
     
-    .links-container h3{
+    .table__heading{
         font-size: unset;
         font-weight: bold;
         margin-bottom: 24px;
@@ -629,7 +661,7 @@ section {
         padding-right: 3%;
     }
 
-    footer{
+    .footer{
         width: 95%;
         color: #444242;
         display: flex;
@@ -638,13 +670,12 @@ section {
         margin-top: -30px;
     }
 
-    footer .terms-and-conditions {
+    .footer__toc {
         display: flex;
         gap: 15px;
     }
 
-    footer .terms-and-conditions p,
-    footer .copyright p {
+    .footer__item {
         font-size: 12px;
     }
 }
@@ -657,4 +688,13 @@ section {
 
 .cursor {
     cursor: pointer;
+}
+
+.none {
+    display: none;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(8rem);
 }

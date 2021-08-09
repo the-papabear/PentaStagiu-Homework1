@@ -5,10 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <title>Meubles - Your favourite online furniture store</title>
 </head>
 <body>
-<header class="header">
+
+   <div class="loading">
+        <div class="loading__container">
+            <div class="loading__logo">
+                <img class="loading__img" src="img/sofa-loading-logo.png">
+            </div>
+            <span class="loading__letter">M</span>
+            <span class="loading__letter">e</span>
+            <span class="loading__letter">u</span>
+            <span class="loading__letter">b</span>
+            <span class="loading__letter">l</span>
+            <span class="loading__letter">e</span>
+            <span class="loading__letter">s</span>
+        </div>
+        <div class="loading__underline"></div>
+    </div> 
+
+<header class="header none">
     <div class="header__container">
         <h1 class="header__title">We care about your well-being!</h1>
         <p class="header__body">As times got tough, we wanted to be as close to our customers as possible. Now you can order all of your favourite items from the comfort of your own home! The best prices now at your fingertips!</p>
@@ -21,7 +43,7 @@
          </div>
       </div>
 </header>
-<div class="main-container">
+<div class="main-container none">
     <nav class="nav nav--sticky">
         <div class="burger-menu">
             <div class="burger-menu__component"></div>
@@ -72,9 +94,9 @@
             </div>
         </div>
         <div class="nav__icons">
-            <ion-icon name="person-outline" class="nav__icon cursor"></ion-icon>
-            <ion-icon name="heart-outline" class="nav__icon cursor"></ion-icon>
-            <ion-icon name="bag-handle-outline" class="nav__icon cursor"></ion-icon>
+            <ion-icon class="nav__icon nav__icon--hidden cursor" name="person-outline"></ion-icon>
+            <ion-icon class="nav__icon cursor" name="heart-outline"></ion-icon>
+            <ion-icon class="nav__icon cursor" name="bag-handle-outline"></ion-icon>
         </div>
     </nav>
 
@@ -83,13 +105,18 @@
             <img class="section__img" src="img/grey-couch-with-blue-pillows.jpg">
         </div>
         <div class="section__text">
-                <h2 class="section__heading">Loved by all family members</h2>
-                <p class="section__content">From your newborn to your cat, the great selection of couches that we provide are sure to make everyone happy. Spend all the time you need to pick the greatest item for your lovely home. Do not worry about item shipping. It's free!
-                </p>
+            <h2 class="section__heading">
+                L<span class="section__letter">
+                    o
+                    <img class="section__img--absolute" src="img/heart.png">
+                </span>ved by all family members
+            </h2>
+            <p class="section__content">From your newborn to your cat, the great selection of couches that we provide are sure to make everyone happy. Spend all the time you need to pick the greatest item for your lovely home. Do not worry about item shipping. It's free!
+            </p>
          </div>
     </section>
 
-    <section class="article">
+    <section class="article sections">
         <div class="article__wrapper">
             <img class="article__img" src="img/child-next-to-a-bookshelf.jpg">
         </div>
@@ -98,11 +125,17 @@
             <p class="article__content">Using the right furniture in your house is proved to boost creativity and make young minds curious about their surroundings.
                 <a class="article__btn" href="">Read more...</a>
             </p>
-            <a class="article__link" href="">Recommended: Creating the right bedroom for children</a>
+            <button type="button" class="article__link cursor">
+                <img class="article__link--loading visibility" src="img/loader.png">
+                <span class="article__span">Recommended: Creating the right bedroom for children</span>
+            </button>
         </div>
     </section>
 
-    <section class="carousel">
+    <section class="carousel sections">
+         <div class="left-arrow">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+        </div>
         <div class="carousel__card">
                 <img class="carousel__img" src="img/carousel/chair-with-bookshelf.jpg">
             <div class="carousel__wrapper">
@@ -167,9 +200,12 @@
                 </div>
             </div>
         </div>
+        <div class="right-arrow">
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+        </div>
     </section>
 
-    <section class="article">
+    <section class="article sections">
         <div class="article__wrapper">
             <img class="article__img" src="img/woman-at-a-desk-next-to-big-windows.jpeg">
         </div>
@@ -178,11 +214,17 @@
             <p class="article_content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, excepturi commodi corporis reiciendis exercitationem assumenda minus quibusdam, harum aspernatur nostrum id saepe. Dolor, cum possimus modi repudiandae aut necessitatibus officiis!
             <a class="article__btn" href="">Read more...</a>
             </p>
-            <a class="article__link" href="" >Recommended: Making the office more homely-looking</a>
+            <button class="article__link cursor">
+                <img class="article__link--loading visibility" src="img/loader.png">
+                <span class="article__span">Recommended: Making the office more homely-looking</span>
+            </button>
         </div>
     </section>
     
-    <section class="carousel">
+    <section class="carousel sections">
+        <div class="left-arrow">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+        </div>
         <div class="carousel__card">
                 <img class="carousel__img" src="img/carousel/modern-chair.jpg">
             <div class="carousel__wrapper">
@@ -247,15 +289,21 @@
                 </div>
             </div>
         </div>
+        <div class="right-arrow">
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+        </div>
     </section>
 
-    <section class="article article--reversed">
+    <section class="article article--reversed sections">
         <div class="article__text">
             <h3 class="article__heading">Working from your couch should be comfy</h3>
             <p class="article__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut sit voluptate temporibus ratione illo, quae mollitia consectetur provident vero dolore. 
             <a class="article__btn" href="">Read more...</a>
             </p>
-            <button class="article__link">One click buy</button>
+            <button class="article__link cursor">
+                <img class="article__link--loading visibility" src="img/loader.png">
+                <span class="article__span">One click buy</span>
+            </button>
         </div>
         <div class="article__wrapper">
             <img class="article__img" src="img/woman-working-on-a-blue-laptop-on-a-couch.jpg">
@@ -264,7 +312,7 @@
 
     <div class="break-line"></div>
 
-    <section class="download">
+    <section class="download sections">
         <div class="download__card">
             <h2>Sample Living Room</h2>
          <div class="download__wrapper">
@@ -290,126 +338,125 @@
         </div>
     </section>
 
-    <div class="contact-mail">
+    <div class="contact">
         <p>For more information, please contact us at</p>
-        <a href="mailto:contact@meubles.com">contact@meublesfurniture.com</a>
+        <a class="contact__link" href="mailto:contact@meubles.com">contact@meublesfurniture.com</a>
     </div>
 
-    <section class="newsletter-form">
-        <div class="newsletter-form--heading">
-            <h2>We can send our best offers directly through e-mail</h2>
+    <section class="newsletter">
+        <div class="newsletter__wrapper">
+            <h2 class="newsletter__heading">We can send our best offers directly through e-mail</h2>
         </div>
-        <div class="newsletter-form--inputs">
-            <input type="text" placeholder="Enter email" class= "mail-input"required>
-            <input type="submit" value="GO" class="submit">
+        <div class="newsletter__inputs">
+            <input class= "newsletter__mail" type="text" placeholder="Enter email" required>
+            <input class="newsletter__submit" type="submit" value="GO" class="submit">
         </div>
-        <p>We promise our e-mails contain only useful information about our products.
+        <p class="newsletter__text">We promise our e-mails contain only useful information about our products.
         </p>
     </section>
 
     <section class="table">
-        <div class="links-container">
+        <div class="table__category">
             <input type="radio" name="tableItem" id="tableItem1">
-                <label for="tableItem1">
-                    <h3>About Us</h3>
-                    <ion-icon name="chevron-down-outline"></ion-icon> 
+                <label for="tableItem1" class="table__label">
+                    <h3 class="table__heading">About Us</h3>
+                    <ion-icon class="table__downarrow" name="chevron-down-outline"></ion-icon> 
                 </label>
-            <div class="table-item-content">
+            <div class="table__content">
                 <ul>
-                    <li class="cursor">Our Heritage</li>
-                    <li class="cursor">Our products</li>
-                    <li class="cursor">Stories and News</li>
-                    <li class="cursor">Investor Relations</li>
-                    <li class="cursor">Policies and Standards</li>
+                    <li class="table__item cursor">Our Heritage</li>
+                    <li class="table__item cursor">Our products</li>
+                    <li class="table__item cursor">Stories and News</li>
+                    <li class="table__item cursor">Investor Relations</li>
+                    <li class="table__item cursor">Policies and Standards</li>
                 </ul>
             </div>
         </div>
 
-        <div class="links-container">
+        <div class="table__category">
                 <input type="radio" name="tableItem" id="tableItem2">
-                <label for="tableItem2">
-                    <h3>Careers</h3>
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                <label for="tableItem2" class="table__label">
+                    <h3 class="table__heading">Careers</h3>
+                    <ion-icon class="table__downarrow" name="chevron-down-outline"></ion-icon>
                 </label>
-            <div class="table-item-content">
+            <div class="table__content">
                 <ul>
-                    <li class="cursor">Culture and Values</li>
-                    <li class="cursor">Inclusion, Diversity, and Equity</li>
-                    <li class="cursor">College achievement plan</li>
-                    <li class="cursor">Careers</li>
-                    <li class="cursor">International Careers</li>
+                    <li class="table__item cursor">Culture and Values</li>
+                    <li class="table__item cursor">Inclusion, Diversity, and Equity</li>
+                    <li class="table__item cursor">College achievement plan</li>
+                    <li class="table__item cursor">Careers</li>
+                    <li class="table__item cursor">International Careers</li>
                 </ul>    
             </div>
         </div>
 
-        <div class="links-container">
+        <div class="table__category">
                 <input type="radio" name="tableItem" id="tableItem3">
-                <label for="tableItem3">
-                    <h3>For Business Partners</h3>
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                <label for="tableItem3" class="table__label">
+                    <h3 class="table__heading">For Business Partners</h3>
+                    <ion-icon class="table__downarrow" name="chevron-down-outline"></ion-icon>
                 </label>
-            <div class="table-item-content">
+            <div class="table__content">
                 <ul>
-                    <li class="cursor">Landlord Support Center</li>
-                    <li class="cursor">Suppliers</li>
-                    <li class="cursor">Corporate Gift Card Sales</li>
+                    <li class="table__item cursor">Landlord Support Center</li>
+                    <li class="table__item cursor">Suppliers</li>
+                    <li class="table__item cursor">Corporate Gift Card Sales</li>
                 </ul>    
             </div>
         </div>
 
-        <div class="links-container">
+        <div class="table__category">
                 <input type="radio" name="tableItem" id="tableItem4">
-                <label for="tableItem4">
-                    <h3>Social Impact</h3>
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                <label for="tableItem4" class="table__label">
+                    <h3 class="table__heading">Social Impact</h3>
+                    <ion-icon class="table__downarrow" name="chevron-down-outline"></ion-icon>
                 </label>
                 
-            <div class="table-item-content">
+            <div class="table__content">
                 <ul>
-                    <li class="cursor">Ethical Sourcing</li>
-                    <li class="cursor">Leading in Sustainabilty</li>
-                    <li class="cursor">Strenghtening Communities</li>
-                    <li class="cursor">Creating Opportunities</li>
-                    <li class="cursor">Global Social Impact Report</li>
+                    <li class="table__item cursor">Ethical Sourcing</li>
+                    <li class="table__item cursor">Leading in Sustainabilty</li>
+                    <li class="table__item cursor">Strenghtening Communities</li>
+                    <li class="table__item cursor">Creating Opportunities</li>
+                    <li class="table__item cursor">Global Social Impact Report</li>
                 </ul>    
             </div>
         </div>
 
-        <div class="links-container">
+        <div class="table__category">
                 <input type="radio" name="tableItem" id="tableItem5">
-                <label for="tableItem5">
-                    <h3>Order and Pickup</h3>
-                    <ion-icon name="chevron-down-outline"></ion-icon>
+                <label for="tableItem5" class="table__label">
+                    <h3 class="table__heading">Order and Pickup</h3>
+                    <ion-icon class="table__heading" name="chevron-down-outline"></ion-icon>
                 </label>
                 
-            <div class="table-item-content">
+            <div class="table__content">
                 <ul>
-                    <li class="cursor">Order on the App</li>
+                    <li class=" table__item cursor">Order on the App</li>
                 </ul>    
             </div>
         </div>
     </section>
 
-    <div class="socials main-container__socials">
-        <ion-icon name="logo-twitter" class="nav__icon"></ion-icon>
-        <ion-icon name="logo-facebook" class="nav__icon"></ion-icon>
-        <ion-icon name="logo-instagram" class="nav__icon"></ion-icon>
-        <ion-icon name="logo-pinterest" class="nav__icon"></ion-icon>
+    <div class="socials">
+        <ion-icon name="logo-twitter" class="socials__icon"></ion-icon>
+        <ion-icon name="logo-facebook" class="socials__icon"></ion-icon>
+        <ion-icon name="logo-instagram" class="socials__icon"></ion-icon>
+        <ion-icon name="logo-pinterest" class="socials__icon"></ion-icon>
     </div>
 
     <div class="break-line"></div>
     
-    <footer>
-        <div class="terms-and-conditions">
-            <p>Terms and conditions</p>
-            <p>Cookies and privacy policy</p>
-            <p>Sitemap</p>
+    <footer class="footer">
+        <div class="footer__toc">
+            <p class="footer__item">Terms and conditions</p>
+            <p class="footer__item">Cookies and privacy policy</p>
+            <p class="footer__item">Sitemap</p>
         </div>
-        <div class="copyright main-container__copyright">
-            <p>&copy; meuble.com 2021. All rights reserved</p>
-        </div>
+        <p class="footer__item">&copy; meuble.com 2021. All rights reserved</p>
     </footer>
 </div>
+    <script defer src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
